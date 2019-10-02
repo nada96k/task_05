@@ -5,12 +5,21 @@
         <title>List</title>
     </head>
     <body>
+        <ol>
         {% for restaurant in restaurants %}
-            <a href="#">
-                <ul>
-                    <li></li>
+            <a href="{% url 'restaurant-detail' restaurant.id %}">
+                
+                    <h2>
+                        <li>{{restaurant.name}}</li>
+                    </h2>
+                  
+                <ul>    
+                    <h3>
+                        <li>{{restaurant.description}}</li>
+                    </h3>
                 </ul>
             </a>
         {% endfor %}
+         </ol> 
     </body>
 </html>
